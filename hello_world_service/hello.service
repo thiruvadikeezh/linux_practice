@@ -1,0 +1,13 @@
+[Unit]
+Description=Hello World Demo Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/local/bin/hello_service.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
+
